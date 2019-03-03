@@ -1,9 +1,11 @@
 {
-  "homepage": "https://afourtimes.github.io/afourtimes",
+  "homepage": "https://www.afourtimes.com/",
   "name": "afourtimes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",

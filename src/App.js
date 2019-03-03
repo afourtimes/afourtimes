@@ -27,8 +27,8 @@ class App extends Component {
             width: windowWidth < 767 ? '100%' : 300,
             height: 425,
         };
-        const view = 'list'; // or 'coverart'
-        const theme = 'white'; // or 'white'
+        const view = 'list';
+        const theme = 'white';
 
         return (
             <div className="App">
