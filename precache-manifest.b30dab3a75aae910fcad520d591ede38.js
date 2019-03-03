@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/afourtimes/static/css/main.a242ed90.chunk.css"
   },
   {
-    "revision": "7aaf5f58cb565eb6ae093aaa738f856d",
+    "revision": "702cb85d438fdc352098e97b933a0841",
     "url": "/afourtimes/index.html"
   }
 ];
