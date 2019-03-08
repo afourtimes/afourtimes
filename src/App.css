@@ -1,20 +1,61 @@
 .App {
+  display: flex;
+  flex-flow: row wrap;
   text-align: center;
   padding: 20px;
   background-color: #000;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.App > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.aside {
+  padding: 10px;
+}
+.timer-number {
+  font-size: 36px;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .spotify-player    { flex: 1 0; }
+  .aside-1 { order: 1; }
+  .spotify-player    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
 }
 
 h1 {
-  color:#FF00E6;
-  font-family: 'Raleway', sans-serif;
   font-size:64px;
-  letter-spacing:10px;
-  animation: text-flicker 6s linear infinite;
+  letter-spacing:2px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  color: beige;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.ig-logo {
+  display: block;
+  margin: 20px auto;
 }
 
 #offset {
-  animation: letter-flicker 4s linear infinite;
+  animation: letter-flicker 6s linear infinite;
 }
 
 @keyframes text-flicker {
