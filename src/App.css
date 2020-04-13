@@ -14,8 +14,20 @@
     height: 150px;
 }
 
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.reach-out {
+    margin-top: 100px;
+}
+
 .content {
-    margin-top: 150px;
+    margin: 150px 0;
 }
 
 .section {
@@ -24,23 +36,27 @@
 
 .prologue {
     position: absolute;
-    text-align: center;
     top: calc(100vh - (100vw / 3.2));
-    width: calc(100% - 40px);
     font-size: calc(100vw / 6);
+    width: calc(100% - 40px);
+}
+
+.honors-header {
+    font-size: calc(100vw / 7);
+    margin: 0;
 }
 
 .text {
     font-size: 32px;
 }
 
-.dots-section {
+.absolute-header-section-left {
     position: absolute;
     left: 20px;
     top: 20px;
 }
 
-.name-section {
+.absolute-header-section-right {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -84,4 +100,45 @@
 
 .white {
     color: #FFFFFF;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    border-top: solid 1px #FFFFFF;
+    padding: 15px 0 20px 0;
+}
+
+li > p {
+    margin: 0;
+}
+
+li:last-of-type {
+    border-bottom: solid 1px #FFFFFF;
+}
+
+li > p:first-of-type {
+    font-size: 28px;
+}
+
+li > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+li > a:hover {
+    opacity: 0.6;
 }

@@ -3,13 +3,15 @@ import {useIntersection} from 'react-use';
 import gsap from 'gsap';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
+import Honors from './components/Honors';
+import ReachOut from './components/ReachOut';
 import './App.css';
 
 const colorList = ['yellow', 'red', 'blue', 'white'];
 
 const App = () => {
   const [index, setIndex] = useState(0);
-  const [date, setCurrentDate] = useState('');
 
   useEffect(() => {
     const changeDotColor = setInterval(() => {
@@ -21,23 +23,12 @@ const App = () => {
     };
   }, []);
 
-  useEffect(() => {
-    return function getCurrentDate() {
-      const today = new Date();
-      const dd = String(today.getDate()).padStart(2, '0');
-      const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-      const yyyy = today.getFullYear();
-
-      return setCurrentDate(`${dd}/${mm}/${yyyy}`);
-    }
-  });
-
   const sectionRef = useRef(null);
 
   const intersection = useIntersection(sectionRef, {
     root: null,
     threshold: 0.5,
-    rootMargin: '0px',
+    rootMargin: '800px',
   });
 
   const fadeIn = (element) => {
@@ -59,19 +50,18 @@ const App = () => {
   };
 
   intersection && intersection.intersectionRatio < 0.5 ?
-    fadeOut('.hahaha')
-    : fadeIn('.hahaha');
+    fadeOut('.intersected')
+    : fadeIn('.intersected');
 
   return (
     <div className="App">
       <Header/>
       <div className="content">
         <div className="section">
-          <p className="prologue">AFOURTIMES<span className={colorList[index]}>.</span></p>
-          <p style={{textAlign: 'center'}} className="text">{date}</p>
+          <p className="prologue section-header">AFOURTIMES<span className={colorList[index]}>.</span></p>
         </div>
-        <div className="section hahaha" ref={sectionRef}>
-          <p className="text">
+        <div className="section intersected" ref={sectionRef}>
+          <p className="text" style={{ minHeight: '600px' }}>
             The best taco bowls are made in Trump Tower Grill. I love Hispanics! Lorem Ipsum is unattractive, both
             inside and out. I fully understand why it’s former users left it for something else. They made a good
             decision. I’m the best thing that ever happened to placeholder text.
@@ -90,8 +80,11 @@ const App = () => {
           </p>
         </div>
         <div className="section">
+          <Honors />
+          <ReachOut />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
