@@ -12,11 +12,17 @@ const App = () => {
   const [date, setCurrentDate] = useState('');
 
   useEffect(() => {
-    function changeDotColor() {
-      setInterval(() => setIndex(index === 3 ? 0 : index + 1), 2500);
-    }
+    const changeDotColor = setInterval(() => {
+      setIndex(index => index === 3 ? 0 : index + 1);
+    }, 2500);
 
-    function getCurrentDate() {
+    return () => {
+      clearInterval(changeDotColor);
+    };
+  }, []);
+
+  useEffect(() => {
+    return function getCurrentDate() {
       const today = new Date();
       const dd = String(today.getDate()).padStart(2, '0');
       const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -24,9 +30,6 @@ const App = () => {
 
       return setCurrentDate(`${dd}/${mm}/${yyyy}`);
     }
-
-    getCurrentDate();
-    changeDotColor();
   });
 
   const sectionRef = useRef(null);
