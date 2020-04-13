@@ -21,10 +21,10 @@ export const Honors = ({ ref }) => {
         {
           honorList.map((honor) =>
             <li>
-              <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-                <p style={{ fontSize: '32px' }}>{honor.name}</p>
-                <p style={{ fontSize: '32px' }}>{honor.provider}</p>
-                <p style={{ fontSize: '16px' }}>{honor.year}</p>
+              <div className="flex-table">
+                <p>{honor.name}</p>
+                <p>{honor.provider}</p>
+                <p>{honor.year}</p>
               </div>
             </li>
           )
