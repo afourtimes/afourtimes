@@ -23,8 +23,7 @@ export const ReachOut = () => {
         {
           reachOutList.map((link) =>
             <li>
-              <a href={link.url} target="_blank" rel="noopener noreferrer">{link.medium}</a>
-
+              <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: '32px' }}>{link.medium}</a>
             </li>
           )
         }
