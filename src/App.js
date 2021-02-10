@@ -1,64 +1,79 @@
-import React, {Component} from 'react';
-import SpotifyPlayer from 'react-spotify-player';
+import React, { useRef, useEffect, useState } from 'react';
+import {useIntersection} from 'react-use';
+import gsap from 'gsap';
+
+import Header from './components/Header';
+import Bio from './components/Bio';
+import Footer from './components/Footer';
+import Work from './components/Work';
+import Honors from './components/Honors';
+import ReachOut from './components/ReachOut';
 import './App.css';
 
-class App extends Component {
-    state = {
-        windowWidth: window.innerWidth,
-    }
+const colorList = ['yellow', 'red', 'blue', 'white'];
 
-    handleResize = () => {
-        this.setState({
-            windowWidth: window.innerWidth,
-        });
-    }
+const App = () => {
+  const [index, setIndex] = useState(0);
 
-    componentDidMount() {
-        window.addEventListener('resize', this.handleResize);
-    }
+  useEffect(() => {
+    const changeDotColor = setInterval(() => {
+      setIndex(index => index === 3 ? 0 : index + 1);
+    }, 2500);
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize);
-    }
+    return () => {
+      clearInterval(changeDotColor);
+    };
+  }, []);
 
-    render() {
-        const {windowWidth} = this.state;
-        const size = {
-            width: windowWidth < 767 ? '100%' : 300,
-            height: 425,
-        };
-        const view = 'list';
-        const theme = 'white';
+  const sectionRef = useRef(null);
 
-        return (
-            <div className="App">
-                <img
-                    src={require('./assets/img/AAAA.jpg')}
-                    width="100"
-                    height="100"
-                    alt="AAAA-logo"
-                    style={{display: 'block', margin: '0 auto'}}
-                    id="offset"
-                />
-                <SpotifyPlayer
-                    uri="spotify:user:adityaastono:playlist:0lCME6JLnPqInwv8SdW2jQ"
-                    size={size}
-                    view={view}
-                    theme={theme}
-                />
-                <a href="https://www.instagram.com/afourtimes/">
-                    <img
-                        src={require('./assets/img/ig-logo.png')}
-                        width="24"
-                        height="24"
-                        alt="ig-logo"
-                        style={{display: 'block', margin: '20px auto'}}
-                    />
-                </a>
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    threshold: 0.5,
+    rootMargin: '500px',
+  });
 
-            </div>
-        );
-    }
+  const fadeIn = (element) => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      y: -60,
+      ease: 'power4.out',
+      stagger: {
+        amount: .3
+      }
+    });
+  };
+  const fadeOut = (element) => {
+    gsap.to(element, 1, {
+      opacity: 0,
+      y: -20,
+      ease: 'power4.out',
+    });
+  };
+
+  intersection && intersection.intersectionRatio < 0.5 ?
+    fadeOut('.hahaha')
+    : fadeIn('.hahaha');
+
+  return (
+    <div className="App">
+      <Header/>
+      <div className="content">
+        <div className="section">
+          <p className="prologue section-header">AFOURTIMES<span className={colorList[index]}>.</span></p>
+        </div>
+        <div className="section hahaha" ref={sectionRef}>
+          <Bio />
+        </div>
+        <div className="section">
+          {/*<Work />*/}
+          {/*<Honors />*/}
+          <ReachOut />
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
