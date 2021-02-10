@@ -66,8 +66,8 @@ const App = () => {
           <Bio />
         </div>
         <div className="section">
-          <Work />
-          <Honors />
+          {/*<Work />*/}
+          {/*<Honors />*/}
           <ReachOut />
         </div>
       </div>
