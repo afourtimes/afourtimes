@@ -18,10 +18,31 @@ export const Bio = () => {
           </div>
           { toggleIndex === 1 &&
             <div className="bio-content" id="definition">
-              <div className="bio-content-points"><span class="bio-content-span">[A]</span>LL</div>
-              <div className="bio-content-points"><span className="bio-content-span">[A]</span>BOUT</div>
-              <div className="bio-content-points"><span className="bio-content-span">[A]</span>DITYA</div>
-              <div className="bio-content-points"><span className="bio-content-span">[A]</span>STONO</div>
+              <div className="wavy">
+                <span className="aaaa-yellow" style={{ '--i': 1 }}>A</span>
+                <span style={{ '--i': 2 }}>l</span>
+                <span style={{ '--i': 3 }}>l</span>
+                <span style={{ '--i': 4 }}> </span>
+                <span className="aaaa-red" style={{ '--i': 5 }}>A</span>
+                <span style={{ '--i': 6 }}>b</span>
+                <span style={{ '--i': 7 }}>o</span>
+                <span style={{ '--i': 8 }}>u</span>
+                <span style={{ '--i': 9 }}>t</span>
+                <span style={{ '--i': 10 }}> </span>
+                <span className="aaaa-blue" style={{ '--i': 11 }}>A</span>
+                <span style={{ '--i': 12 }}>d</span>
+                <span style={{ '--i': 13 }}>i</span>
+                <span style={{ '--i': 14 }}>t</span>
+                <span style={{ '--i': 15 }}>y</span>
+                <span style={{ '--i': 16 }}>a</span>
+                <span style={{ '--i': 17 }}> </span>
+                <span className="aaaa-white" style={{ '--i': 18, color: '#000' }}>A</span>
+                <span style={{ '--i': 19 }}>s</span>
+                <span style={{ '--i': 20 }}>t</span>
+                <span style={{ '--i': 21 }}>o</span>
+                <span style={{ '--i': 22 }}>n</span>
+                <span style={{ '--i': 23 }}>o</span>
+              </div>
             </div>
           }
         </div>
@@ -56,8 +77,58 @@ export const Bio = () => {
           </div>
           { toggleIndex === 3 &&
           <div className="bio-content" id="galileo">
-            <div className="bio-content-points">AN EYE FOR AN EYE</div>
-            <div className="bio-content-points">AND THE WORLD GOES BLIND</div>
+            <div className="circle">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="300"
+                height="300"
+                viewBox="0 0 300 300"
+                enableBackground="new 0 0 300 300"
+                xmlSpace="preserve">
+                <defs>
+                  <path
+                    id="circlePath"
+                    d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                </defs>
+                <circle cx="150" cy="100" r="75" fill="none"/>
+                <g>
+                    <use xlinkHref="#circlePath" fill="none"/>
+                    <text fill="#FFF">
+                        <textPath xlinkHref="#circlePath">An eye for an eye</textPath>
+                    </text>
+                </g>
+              </svg>
+            </div>
+            <div className="circle">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="300"
+                height="300"
+                viewBox="0 0 300 300"
+                enable-background="new 0 0 300 300"
+                xmlSpace="preserve">
+                <defs>
+                  <path
+                    id="circlePath"
+                    d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                </defs>
+                <circle cx="150" cy="100" r="75" fill="none"/>
+                <g>
+                  <use xlinkHref="#circlePath" fill="none"/>
+                  <text fill="#FFF">
+                    <textPath xlinkHref="#circlePath">and the world is blind.</textPath>
+                  </text>
+                </g>
+              </svg>
+            </div>
           </div>
           }
         </div>

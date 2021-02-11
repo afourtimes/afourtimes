@@ -90,6 +90,10 @@
     background-color: #FFFFFF;
 }
 
+.aaaa-grey {
+    background-color: darkgrey;
+}
+
 .red {
     color: #A80300;
 }
@@ -177,6 +181,10 @@ li > .blue-hover:hover {
 
 .bio-content-points {
     margin-bottom: 1.5rem;
+}
+
+#definition {
+    padding-top: 3rem;
 }
 
 #rotation {
@@ -342,6 +350,56 @@ li > .blue-hover:hover {
     }
 }
 
+.circle { position: relative; width: 50%; padding-bottom: 50%; overflow: hidden; display: inline-block; }
+
+.circle text { font-family: 'Helvetica Neue', Arial; font-size: 32px; font-weight: bold; }
+
+.circle svg { position: absolute; left: 0; top: 0; width: 100%; height: 400px;
+
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -ms-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
+
 @media screen and (max-width: 767px) {
     .flex-table {
         display: block;
@@ -355,5 +413,46 @@ li > .blue-hover:hover {
     .flex-table > p:first-of-type {
         font-size: 32px;
         margin: 0 0 10px 0;
+    }
+
+    .circle {
+        width: 100%; padding-bottom: 80%; overflow: hidden; display: block;
+    }
+
+    .circle svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.wavy {
+    position: relative;
+}
+
+.wavy span {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
     }
 }
