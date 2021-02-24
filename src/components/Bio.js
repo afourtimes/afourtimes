@@ -7,18 +7,6 @@ export const Bio = () => {
     'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
     'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
     'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
-    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o', '.',
   ];
 
   return (
@@ -55,14 +43,6 @@ export const Bio = () => {
           { toggleIndex === 2 &&
           <div className="bio-content" id="observe">
             <div className="bio-content-points">
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
-              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
               蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
               蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
               蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
