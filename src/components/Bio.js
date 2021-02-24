@@ -19,24 +19,24 @@ export const Bio = () => {
           { toggleIndex === 1 &&
             <div className="bio-content" id="definition">
               <div className="wavy">
-                <span className="aaaa-yellow" style={{ '--i': 1 }}>A</span>
+                <span style={{ '--i': 1 }}>A</span>
                 <span style={{ '--i': 2 }}>l</span>
                 <span style={{ '--i': 3 }}>l</span>
                 <span style={{ '--i': 4 }}> </span>
-                <span className="aaaa-red" style={{ '--i': 5 }}>A</span>
+                <span style={{ '--i': 5 }}>A</span>
                 <span style={{ '--i': 6 }}>b</span>
                 <span style={{ '--i': 7 }}>o</span>
                 <span style={{ '--i': 8 }}>u</span>
                 <span style={{ '--i': 9 }}>t</span>
                 <span style={{ '--i': 10 }}> </span>
-                <span className="aaaa-blue" style={{ '--i': 11 }}>A</span>
+                <span style={{ '--i': 11 }}>A</span>
                 <span style={{ '--i': 12 }}>d</span>
                 <span style={{ '--i': 13 }}>i</span>
                 <span style={{ '--i': 14 }}>t</span>
                 <span style={{ '--i': 15 }}>y</span>
                 <span style={{ '--i': 16 }}>a</span>
                 <span style={{ '--i': 17 }}> </span>
-                <span className="aaaa-white" style={{ '--i': 18, color: '#000' }}>A</span>
+                <span style={{ '--i': 18 }}>A</span>
                 <span style={{ '--i': 19 }}>s</span>
                 <span style={{ '--i': 20 }}>t</span>
                 <span style={{ '--i': 21 }}>o</span>
@@ -58,10 +58,24 @@ export const Bio = () => {
           </div>
           { toggleIndex === 2 &&
           <div className="bio-content" id="observe">
-            <div className="bio-content-points">蔡德明</div>
-            <div className="bio-content-points">SOERABADJA</div>
-            <div className="bio-content-points">781018800</div>
-            <div className="bio-content-points">INFJ-T</div>
+            <div className="bio-content-points">
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+              蔡德明 ++++ SOERABADJA ++++ 781018800 ++++ INFJ-T ++++
+            </div>
           </div>
           }
         </div>
