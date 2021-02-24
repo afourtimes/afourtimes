@@ -5,8 +5,6 @@ import gsap from 'gsap';
 import Header from './components/Header';
 import Bio from './components/Bio';
 import Footer from './components/Footer';
-import Work from './components/Work';
-import Honors from './components/Honors';
 import ReachOut from './components/ReachOut';
 import './App.css';
 

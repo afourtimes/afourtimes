@@ -2,6 +2,24 @@ import React, { useState } from 'react';
 
 export const Bio = () => {
   const [toggleIndex, toggleOpen] = useState(0);
+  const wavyText = [
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o',
+    'A', 'l', 'l', 'A', 'b', 'o', 'u', 't', 'A', 'd', 'i', 't', 'y', 'a', 'A', 's', 't', 'o', 'n', 'o', '.',
+  ];
 
   return (
     <div className="bio">
@@ -19,29 +37,7 @@ export const Bio = () => {
           { toggleIndex === 1 &&
             <div className="bio-content" id="definition">
               <div className="wavy">
-                <span style={{ '--i': 1 }}>A</span>
-                <span style={{ '--i': 2 }}>l</span>
-                <span style={{ '--i': 3 }}>l</span>
-                <span style={{ '--i': 4 }}> </span>
-                <span style={{ '--i': 5 }}>A</span>
-                <span style={{ '--i': 6 }}>b</span>
-                <span style={{ '--i': 7 }}>o</span>
-                <span style={{ '--i': 8 }}>u</span>
-                <span style={{ '--i': 9 }}>t</span>
-                <span style={{ '--i': 10 }}> </span>
-                <span style={{ '--i': 11 }}>A</span>
-                <span style={{ '--i': 12 }}>d</span>
-                <span style={{ '--i': 13 }}>i</span>
-                <span style={{ '--i': 14 }}>t</span>
-                <span style={{ '--i': 15 }}>y</span>
-                <span style={{ '--i': 16 }}>a</span>
-                <span style={{ '--i': 17 }}> </span>
-                <span style={{ '--i': 18 }}>A</span>
-                <span style={{ '--i': 19 }}>s</span>
-                <span style={{ '--i': 20 }}>t</span>
-                <span style={{ '--i': 21 }}>o</span>
-                <span style={{ '--i': 22 }}>n</span>
-                <span style={{ '--i': 23 }}>o</span>
+                { wavyText.map((text, index) => <span style={{ '--i': index + 1 }}>{ text }</span> ) }
               </div>
             </div>
           }
@@ -158,7 +154,7 @@ export const Bio = () => {
           </div>
           { toggleIndex === 4 &&
           <div className="bio-content" id="rotation">
-            <iframe id="rotation-iframe" src="https://open.spotify.com/embed/playlist/5J7s69JqzOY2aD5z5gRsy4" gesture="media" allow="encrypted-media"/>
+            <iframe title="spot-player" id="rotation-iframe" src="https://open.spotify.com/embed/playlist/5J7s69JqzOY2aD5z5gRsy4" gesture="media" allow="encrypted-media"/>
           </div>
           }
         </div>
