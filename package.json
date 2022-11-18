@@ -9,7 +9,7 @@
     "gsap": "^3.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "2.1.5",
+    "react-scripts": "5.0.1",
     "react-scrollmagic": "^2.2.0",
     "react-transition-group": "^4.3.0",
     "react-use": "^14.1.1"
